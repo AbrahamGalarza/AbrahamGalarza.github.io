@@ -6,3 +6,11 @@ main {
     margin: auto;
     width: 480px;
 }
+footer > p{
+    border-style: solid;
+    border-width: 1px;
+    width: 600;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
