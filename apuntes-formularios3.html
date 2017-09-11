@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<html>
+    <head>
+        <title>Formularios</title>
+    </head>
+    <body>
+        <h1>Formularios</h1>
+        <div>
+            <h3>fieldset</h3>
+            <p>La etiqueta <strong>fieldset</strong> se utiliza para agrupar elementos relacionados en un 
+                formulario, es decir, dibuja un cuadro alrededor de los elementos relacionados. Como en la sigueinte
+                imagen.
+            </p>
+        </div>
+        <div>
+            <h3>legend</h3>
+            <p>Permite definir una leyenda para los elementos agrupados con la etiqueta <strong>fieldset</strong>.
+            Esta etiqueta <strong>legend</strong> debe estar dentro de la etiqueta <strong>fieldset</strong>.</p>
+        </div>
+
+        <img src="imagenes/fieldset.png">
+
+        <div>
+            <h3> Diferencias entre Botones checkbox y radio</h3>
+            <p>Los RadioButton los utilizamos cuando queremos seleccionar un elemento entre varios elementos 
+                de un grupo porque solo deja seleccionar una opción. 
+                En cambio, los Checkbox se utilizan cuando uno o más elementos pueden ser seleccionados.
+            </p>
+            <h4>checkbox</h4>
+            <p>Los botones checkbox en su atributo <strong>name</strong> deben ser declarados como un arreglo
+                para poder enviar todas las opciones selecionadas al servidor.En cambio si no se declara así solo
+                sera enviada la última opción seleccionada. En el atributo <strong>value</strong> se asigna
+                el nombre que tendra cada checkbox de las opciones<br>
+                ejemplo <br>
+                <img src="imagenes/checkbox.png">
+            </p>
+            <h4>radiobutton</h4>
+            <p>Los radio button no necesitan ser declarados como un arreglo en su atributo <strong>name</strong>
+                porque solo se puede seleccionar uno a la vez. Al igual que los checkbox en su atributo 
+                <strong>value</strong> se asigna el nombre que tendra cada radiobutton de las opciones<br>
+                <img src="imagenes/radiobutton.png">
+            </p>
+        </div>
+
+        <div>
+            <h3>Botones de envío</h3>
+            <h4>Boton de envio "submit"</h4>
+            <p>Este tipo de botones envía automáticamente el formulario en que se encuentra cuando es presionado. 
+                Es decir, cuando se pulsa el botón el navegador nos lleva a la dirección web indicada en el campo 
+                action y al mismo tiempo envía a esa dirección los datos que contiene el formulario.
+                Para indicar que se trata de un botón de envío dentro de esta etiqueta escribiremos type = "submit".
+            </p>
+            <h4>Boton de envio "button"</h4>
+            <p>Los botones de contenido pueden ser usados como botones de envío o restablecimiento, o bien pueden 
+                no tener ninguna acción preestablecida dependiendo del valor de su atributo "type". Su característica 
+                principal es que se puede insertar contenido HTML dentro de ellos y así darles un aspecto atractivo, 
+                como imágenes o colores de fondo, etc. <br>
+                Los botones de contenido se insertan con la etiqueta <strong>button</strong>, usando el valor "button", 
+                "submit" o "reset"  en su atributo "type". Un valor button supondrá que el botón no hará nada en respuesta a un click.
+            </p>
+        </div>
+
+        <div>
+            <h3>Atributos name y value</h3>
+            <h4>name</h4>
+            <p>El atributo name especifica el nombre de un elemento <strong>input</strong>.El atributo <strong>name</strong> se utiliza 
+                para  referenciar datos de formulario después de enviar un formulario.</p>
+            <h4>value</h4>
+            <p>El atributo <strong>value</strong> especifica el valor de un elemento <strong>input</strong>. El atributo value se utiliza de forma diferente para diferentes tipos de entrada: <br>
+            </p>
+            <ul>
+                <li>Para "button", "reset" y "submit" - define el texto en el botón</li>
+                <li>Para "text" y "password" define el valor inicial (predeterminado) del campo de entrada</li>
+                <li>Para "checkbox" y "radio" - define el valor asociado con la entrada (este es también el valor que se envía al enviar)</li>
+            </ul>
+
+        </div>
+    </body>
+</html>
+
