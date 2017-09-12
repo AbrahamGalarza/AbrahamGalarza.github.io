@@ -19,9 +19,9 @@
         <div>
             <h3>Flujo Normal (position : stactic)</h3>
             <p>Elementos en bloque uno encima de otro.</p>
-            <img src="imagenes/flujo_Normal.png" alt="Elemento en bloque">
+            <img src="imagenes/flujo_Normal.png" alt="Elemento en bloque uno encima de otro">
             <p>Elementos en linea de izquierda de derecha</p>
-            <img src="imagenes/Elemento-linea.png" alt="Elemento en linea">
+            <img src="imagenes/Elemento-linea.png" alt="Elemento en linea de izquierda a derecha">
         </div>
         <div>
             <h3>Posicionamiento relativo (position : relative)</h3>
@@ -41,6 +41,29 @@
                 <li>Se desplaza conforme al documento, se hace scroll.</li>
             </ul>
             <img src="imagenes/posicionamiento-absoluto.png" alt="Posicionamiento Absoluto">
+        </div>
+        <div>
+            <h3>Posicionamiento Fijo (position : fixed)</h3>
+            <ul>
+                <li>Fijo con respecto al viewport.</li>
+                <li>No se mueve cuando hacemos scroll del documento.</li>
+                <li>Se puede traslapar elementos.</li>
+                <li>Propiedad z-index, el mayor es el que se pone al frente.</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Elementos Flotantes</h3>
+            <p>Permiten quitar un elemento del flujo normal y posicionarlo hacia la
+                izquierda o derecha del elemento que lo contiene. <br>
+                Los elementos posteriores se tienen que "limpiar" con la propiedad clear que 
+                tiene las siguientes opciones:
+            </p>
+            <ul>
+                <li>left</li>
+                <li>right</li>
+                <li>both</li>
+            </ul>
+            <img src="imagenes/Elemento-flotante.png" alt="Elemento Flotante">
         </div>
     </body>
 </html>
