@@ -1,0 +1,27 @@
+p{
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+body{
+    background-color: #f9f6ff;
+    margin:auto;
+    width: 800px;
+}
+h1 {
+    margin-top: 50px;
+    text-align: center;
+    color:#ff0000;
+    font-family: sans-serif;
+    border-style: ridge;
+    border-color: blueviolet;
+    border-width: 7px;
+}
+
+h2{
+    margin-top : 20px;
+    text-align: center;
+    font-family: cursive;
+}
