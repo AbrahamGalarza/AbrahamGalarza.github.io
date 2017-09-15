@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Cascada y Especificidad</title>
+    </head>
+    <body>
+        <h1>Cascada y Especificidad</h1>
+        <div>
+            <p>En este ejemplo se aplica el último, porque se toman en cascada es decir toma en cuenta el
+                último. <br>
+                h1 { backgroud : black; }<br>
+                h1 { backgroud : white; }
+                
+            }</p>
+        </div>
+
+        <div>
+            <p>En este ejemplo se aplica ..............<br> 
+                p em { font-weigth : bold; } <br>
+                em { }
+            </p>
+        </div>
+
+        <div>
+            <p>En este ejemplo se aplica ............. <br>
+            #fish h1 .bass { color: red; } <br>
+            #fish h1 { color : green; }
+            </p>
+        </div>
+
+        <div>
+            <p>En este ejemplo se aplica el "id" porque es único y considera mas importamnte <br>
+                < div id="cat" class="dog"> < /div>
+            </p>
+        </div>
+
+        <div>
+            <h3>Especificidad (mayor a menor)</h3>
+            <ol>
+                <li>En linea</li>
+                <li>ID's</li>
+                <li>Clases</li>
+                <li>Elementos</li>
+            </ol>
+            <p> "*" menor especificidad </p>
+        </div>
+        <div>
+            <table>
+                <tr>
+                    <td>    </td>
+                    <td>En linea</td>
+                    <td>ID's</td>
+                    <td>Clases</td>
+                    <td>Elementos</td>
+                </tr>
+                <tr>
+                    <td>   </td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>    </td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>    </td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>    </td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>    </td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>    </td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                </tr>
+            </table>
+
+        </div>
+    </body>
+</html>

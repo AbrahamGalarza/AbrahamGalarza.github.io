@@ -16,16 +16,18 @@
 #contenedor{
     background: white;
     margin: 20px;
-    width: 400px;
+    width: 500px;
 }
 
 body{
-    background-color: lightsalmon;
+    background-color: #FCFFDC;
 }
-#p1 #p2{
+
+#p1, #p2{
     float: left;
     width: 100px;
 }
 #p3{
-
+    /*float: left;*/
+    width: 100px;
 }
