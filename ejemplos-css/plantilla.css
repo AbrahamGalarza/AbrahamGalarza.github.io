@@ -1,0 +1,26 @@
+#encabezado{
+    background-color: rgba(60, 59, 51, 0.77);
+    font-family: sans-serif;
+    color: white;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+body{
+    margin-top: 50px;
+    margin-right: 200px;
+    margin-bottom: 50px;
+    margin-left: 200px;
+}
+p {
+    float: left;
+    width: 800px;
+    text-align: justify;
+    clear: both;
+    margin: 5px;
+}
+#titulo{
+    font-family: sans-serif;
+    margin: 5px;
+}
+
