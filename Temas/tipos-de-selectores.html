@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tipos de selectores</title>
+            </head>
+    <body>
+        <h1>Tipos de selectores</h1>
+        <div>
+            <ol>
+                <li id="universal">Selector Universal</li>
+                <li id="etiqueta">Selector de tipo <em>etiqueta</em></li>
+                <li id="clase">Selector de Clase</li>
+                <li id="identificador">Selector de Identificador</li>
+                <li id="hijo">Selector Hijo</li>
+                <li id="descendiennte">Selector Descendiente</li>
+            </ol>
+        </div>
+        <div>
+            <h3>Selector Universal</h3>
+            <p>Aplica un estilo a todos los elementos del documento.<br>
+                ejemplo: <br> 
+                *{ font-type : Arial; }
+            </p>
+
+            <h3>Selector de tipo etiqueta</h3>
+            <p>Aplica un estilo a todos los elementos de la etiqueta.<br>
+                ejemplo: <br> 
+                h1{ font-size : 30px ; }
+            </p>
+
+            <h3>Selector de Clase</h3>
+            <p>Aplica un estilo a los elementos que tengan el atributo <a href="#clases">class</a> especificado por 
+                el valor.<br> 
+                ejemplo: <br>
+                .nota { color : red ; }
+            </p>
+
+            <h3>Selector de Identificador</h3>
+            <p>Aplica el estilo a los elementos que tienen el atributo <a href="#ids">id</a> con con un valor dado.<br>
+                ejemplo : <br>
+                introduccion { background : cyan ; }
+            </p>
+
+            <h3>Selector hijo</h3>
+            <p>Aplica el estilos a los elementos que son hijos <strong>inmediatos</strong>> de otro.<br>
+                ejemplo: <br>
+                li > a { font-weight : bold ;}
+            </p>
+
+            <h3>Selector Descendiente</h3>
+            <p>Aplica el estilo a los elementos que son <strong>hijos descendientes</strong> (no necesariamente independientes).<br>
+                ejemplo: <br>
+                p a { texto-align : center ;}
+            </p>
+        </div>
+        <div>
+            <h3 id="clases">Clases</h3>
+            <p>Las clases son utilizadas para denotar múltiples elementos que reciban el mismo estilo.</p>
+
+            <h3 id="ids">ID's</h3>
+            <p>Son unicos y solamente se pueden aplicar a un elemento, se usan una sola vez por documento.</p>
+        </div>
+    </body>
+</html>

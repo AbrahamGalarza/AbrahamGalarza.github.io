@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Modelo de caja</title>
+        <link rel="stylesheet" href="apuntes.css">
+    </head>
+    <body id="contenido">
+        <div>
+            <h1>Modelo de Caja</h1>
+            <p>El modelo de cajas es una de las características más importante del lenguaje de 
+                hojas de estilos CSS, porque condiciona el diseño de las páginas web. El modelo de cajas es 
+                el comportamiento de CSS que hace que todos los elementos de las páginas se representen 
+                mediante cajas rectangulares.
+            </p>
+            <p>Las cajas de una página se crean automáticamente. Cada vez que se inserta una etiqueta, 
+                se crea una nueva caja rectangular que encierra los contenidos de ese elemento, como en el siguiente
+                ejemplo.
+            </p>
+            <img src="imagenes/modelo-caja.png" alt="Modelo de caja">
+            <p>Las partes que componen una caja y el orden de visualización desde el punto de vista del usuario
+                son los siguientes:
+            </p>
+            <ul>
+                <li><strong>Content (contenido)</strong>: Son las palabras de un párrafo, una imagen,una lista,etc.</li>
+                <li><strong>Padding (relleno)</strong>: es un espacio libre opcional existente entre el contenido y el borde.</li>
+                <li><strong>Border (borde)</strong>: es una línea que encierra completamente el contenido y su relleno. </li>
+                <li><strong>Margin (margen)</strong>: separación opcional existente entre la caja y el resto de cajas adyacentes.</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Border</h3>
+            <p>Al borde se le puede aplicar color un estilo y un ancho, por ejemplo algunos estilos que se pueden
+                aplicar son:
+            </p>
+            <ul>
+                <li>Solido</li>
+                <li>Punteado</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Margin</h3>
+            <p>Las propiedades de margin establecen el tamaño del espacio en blanco fuera del borde. 
+                Para especificar el tamaño se fija el tamaño seguido de px por ejemplo "20px". <br>
+                El margen se puede establecer en sus cuatro lados que son:
+            </p>
+            <ul>
+                <li>top (arriba)</li>
+                <li>right (derecha)</li>
+                <li>bottom (abajo)</li>
+                <li>left (izquierda)</li>
+            </ul>
+            <p>En este ejemplo<br>
+                margin-top : 20; <br>
+                margin-right : 10px;<br>
+                margin-bottom : 15px;<br>
+                margin-left : 25px; <br>
+            </p>
+            <p>Otra forma es definirlas todas en una sola linea, es comenzando colocando primero top, right, left y bottom, en este orden <br>
+                margin: 20px 10px 15px 25px;
+            </p>
+            <p>Si el margen tendrá la misma medida en los cuatro lados sería de la siguiente manera <br>
+                margin : 20px;</p>
+        </div>
+        <div>
+            <h3>Padding</h3>
+            <p>El padding borra un área alrededor del contenido (dentro del borde) de un elemento. Este cumple las mismas
+                especificaciones que el margin para fijar los valores, lo unico que cambia es la que utiliza pdding en vez
+                de margin por ejemplo: <br>
+                padding-top : 20; <br>
+                padding-right : 10px;<br>
+                padding-bottom : 15px;<br>
+                padding-left : 25px; <br>
+            </p>
+        </div>
+    </body>
+</html>

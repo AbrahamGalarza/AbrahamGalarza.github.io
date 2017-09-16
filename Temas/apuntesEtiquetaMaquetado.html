@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Etiquetas de Maquetado</title>
+        <link rel="stylesheet" href="apuntes.css">
+    </head>
+    <body id="contenido">
+        <h1>Etiquetas de Maquetado</h1>
+        <div>
+            <p>Los elementos en HTML usualmente son elementos "<strong>en línea</strong>" o elementos "<strong>en bloque</strong>".</p>
+            <dl>
+                <dt>Elemento de Bloque</dt>
+                <dd>Un elemento en bloque ocupa todo el espacio de su elemento padre (contenedor), creando así un "bloque".
+                    Estos comienzan en una nueva linea, por ejemplo, un parrafo.
+                </dd>
+                <dt>Elemento en Linea</dt>
+                <dd>Un elemento en línea ocupa sólo el espacio delimitado por las etiquetas que definen el elemento en línea.
+                    Estos continuan en la misma linea, por ejemplo, un enlace.
+                </dd>
+            </dl>
+        </div>
+        <div>
+            <h3>Regla de Etiquetas de bloque</h3>
+            <p> <strong>Los elementos en línea no deben contener elementos de bloque. Pero si está permitido que los elementos de bloque contengan elementos de bloque o en línea</strong>
+                <img src="imagenes/elementos_html.png" width="850" title="Etiquetas en bloque y linea">
+            </p>
+        </div>
+        <div>
+            <h3>Semánticas</h3>
+            <dl>
+                <dt><em>header</em></dt>
+                    <dd>El elemento de Header representa un grupo de ayudas introductorias o de navegación. Puede contener 
+                    algunos elementos de encabezado, pero también otros elementos como un logo, una sección que aglutine secciones
+                     de encabezados, una formulario de búsqueda o cosas parecidas.</dd>
+                <dt><em>nav</em></dt>
+                    <dd>Se utiliza para crear un menu de navegación.</dd>
+                <dt><em>article</em></dt>
+                    <dd>Este se destina a distribuir de forma independiente o reutilizable, por ejemplo, en la sindicación. 
+                        Podría ser un mensaje en un foro, un artículo de una revista o un periódico, una entrada de blog, 
+                        un comentario de un usuario, un widget interactivo o gadget, o cualquier otro elemento independiente del 
+                        contenido.</dd>
+                <dt><em>section</em></dt>
+                    <dd>Este representa una sección genérica de un documento. Sirve para determinar qué contenido corresponde a 
+                        qué parte de un esquema.</dd>
+                <dt><em>footer</em></dt>
+                    <dd>Este Representa un pie de página para el contenido de sección más cercano o el elemento  raíz de 
+                        sección.Un pie de página típicamente contiene información acerca de el autor de la sección, 
+                        datos de derechos de autor o enlaces a documentos relacionados.</dd>
+            </dl>
+        </div>
+        <div>
+            <h3>No Semánticas</h3>
+            <dl>
+                <dt><em>div</em></dt>
+                <dd>Sirven para agrupar elementos en bloque.</dd>
+                <dt><em>span</em></dt>
+                <dd>Sirven para agrupar elementos en linea.</dd>
+            </dl>
+        </div>
+        <img src="imagenes/semantica_html.png" title="Ejemplo de Semánticas"><br/>
+    </body>
+</html>
