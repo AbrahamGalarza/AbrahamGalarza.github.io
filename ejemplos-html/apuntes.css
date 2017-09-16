@@ -2,6 +2,15 @@
     font-family: sans-serif;
     margin-top: 20px;
     margin-bottom: 20px;
+    background-color: #FFFFF0;
+    margin-left: 25px;
+    margin-right: 25px;
+    text-align: justify;
+}
+#tabla-indice{
+    font-family: sans-serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
     background-color: #fdfde7;
     margin-left: 25px;
     margin-right: 25px;
@@ -38,7 +47,7 @@ table {
     border-collapse: collapse; 
 }
 
-th {     
+/*th {     
     font-size: 13px;     
     font-weight: normal;     
     padding: 8px;     
@@ -61,4 +70,31 @@ td {
 tr:hover td { 
     background: #d0dafd; 
     color: #339; 
+}*/
+table th {
+    background-color: rgba(213, 220, 132, 0.76); 
+    text-align: center;
+    font-size: 15px;
+}
+
+table tr:nth-child(odd) {
+    background-color: #F0EEEE;
+    text-align: center;
+    font-size: 15px;
+}
+
+table tr:nth-child(even) {
+    background-color: #C8CCFF;
+    text-align: center;
+    font-size: 15px;
+}
+#titulo-indice{
+    font-family: sans-serif;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    color: #000000;
+    font-size: 50px;
+}
+a{
+    color:red
 }
