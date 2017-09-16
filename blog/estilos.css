@@ -17,6 +17,7 @@ footer > p{
     text-align: center;
     padding-top: 20px;
     margin-top: 20px;
+    margin-bottom: 50px;
 }
 h1{
     text-align: center;
@@ -44,6 +45,9 @@ p{
 }
 h2{
     color: #673342;
+}
+h3{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 a{
     background-color:#6E7070;
