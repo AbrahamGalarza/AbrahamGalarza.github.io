@@ -1,58 +1,50 @@
 <!DOCTYPE html>
-<head>
-    <meta charset="UTF-8">
-    <title>Formularios</title>
-</head>
-<body>
+<html>
+    <head>
+        <title>
+            Formularios
+        </title>
+        <meta charset="utf-8">
+    </head>
 
-   <!-- <form action "https://www.w3schools.com/action_page.php"
-    method="POST">-->
-    <form action="https://tecweb-acominf.c9users.io/envio.php"
-    method="POST">
+    <body>
+        <h2>  Ejemplos de formularios     </h2>
+       
+       
+       <!-- <form action="https://www.w3schools.com/action_page.php"
+              method="GET"> 
+       -->
     
-    <fieldset>
-        <legend>Datos Personales</legend>
-        <label>
-        Nombre: <input type="text"placeholder="Nombre y Apellidos" name="nombreUsuario" value=""><br>
-        </label>
-        <label for="idContraseña">Contraseña:</label>
-         <input type="password" name="pass" value="" id="idContraseña" required><br>
-        Edad: <input type="number" name="edadUsuario" value="" required><br>
-        Foto de Perfil <input type="file" name="foto"><br>
-        Fecha de nacimiento: <input type="date" name="fecha"><br>
-        Estado de origen: 
-        <select name="Estado">
-            <option value="SLP">San Luis Potosi</option>
-            <option value="CDMX">Ciudad de México</option>
-            <option value="MTY">Monterrey</option>
-            <option value="GDL">Guadalajara</option>
-        </select><br>
-        Materias Favoritas
-        <select name="materias[]" multiple>
-            <option>Pensamiento Computacional</option>
-            <option>Quimica</option>
-            <option>Compiladores e Interpretes</option>
-            <option>Tecnologias Web</option>
-        </select> <br>
-        comentarios:
-        <textarea placeholder="Escribe tus comentarios"></textarea>
-    </fieldset>
+       <form action="https://tecweb-acominf.c9users.io/envio.php"
+       method="POST">
+    
+       <fieldset>
+            <legend>  Datos personales </legend><br>
 
-    <fieldset>
-        <legend>Preferencias</legend>
-        Sistema Operativo:
-        Windows <input type="checkbox" name="sistema[]" value="Windows">
-        Linux <input type="checkbox" name="sistema[]" value="Linux">
-        OSX <input type="checkbox" name="sistema[]" value="OXS"><br>
-        Telefono:
-        Android <input type="radio" name="telefono" value="Android">
-        iOS <input type="radio" name="telefono" value="iOS">     
-    </fieldset>
-    
-    <!--<input type="button" value="Registrar">-->
-    <input type="reset">
-    <button>Registrar</button>
-    </button>
-    </form>
-</body>
+                Nombre:<input type="text" name="nombreUsuario"value=""> <br> <br>
+                Contraseña: <input type="password" name="Contraseña" value=""> <br><br>
+                Edad: <input type="number" name="edadDelUsuario" value="22">     
+        </fieldset>
+
+        <br><br>
+        
+        <fieldset>
+                <legend>  Datos personales    </legend><br>
+                    Sistema operativo: <br>
+                    windows:<input type="checkbox" name="Sistema" value="Windows" > 
+                    linux: <input type="checkbox" name="Sistema" value="Linux"> 
+                    osx: <input type="checkbox" name="Sistema" value="osx">     <br><br>
+                    
+                    Telefono: <br>
+                    Android:<input type="radio" name="Telefono"  value="Android"> 
+                    IOS: <input type="radio" name="Telefono"value="IOS"> 
+            </fieldset>
+
+
+            
+        <input type="submit" value="Registrar">
+
+        </form>
+ 
+    </body>
 </html>
