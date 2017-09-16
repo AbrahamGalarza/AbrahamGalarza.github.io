@@ -28,9 +28,27 @@ h1{
     margin-left: 200px;
     margin-right: 200px;
 }
+#titulo-articulo{
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    background-color:#013859;
+    color: white;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
 p{
     font-family: sans-serif;
 }
 h2{
     color: #673342;
+
+a{
+    background-color:#6E7070;
+    color:black;
+    padding : 10px;
+    border-style: inset;
+    border-width: 2px;
+    border-color: black;
 }
