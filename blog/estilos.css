@@ -57,7 +57,7 @@ a{
     border-width: 2px;
     border-color: black;
 }
-#cuerpo-articulo{
+.cuerpo-articulo{
 
     font-family: sans-serif;
     font-size: 18px;
