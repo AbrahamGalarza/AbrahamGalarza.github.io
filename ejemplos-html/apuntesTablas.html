@@ -2,8 +2,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Tablas</title>
+    <link rel="stylesheet" href="apuntes.css">
 </head>
-<body>
+<body id="contenido">
     <h1>Tablas</h1>
     <dl>
         <dt>Tabla</dt>
@@ -11,7 +12,7 @@
         <dt>Fila</dt>
         <dd>Las filas son elementos compuestos por elementos <em>celdas</em></dd>
     </dl>
-    <h4>Estructura de una tabla</h4>
+    <h2>Estructura de una tabla</h2>
     <ul>
     <li>Para definir una tabla se utiliza la etiqueta <em>table</em></li>
     <li>Para definir un renglon se utiliza la etiqueta <em>tr</em></li>
@@ -21,11 +22,18 @@
     etiqueta <em>tr</em> y las celdas se define con la etiqueta <em>td</em> dentro de la etiqueta <em>tr</em>. Las celdas se van asignando
     de izquierda a derecha.
     </p>
-    <img src="imagenes/tabla.png">
-    <h4>Rawspan</h4>
+    <img src="imagenes/tabla.png" title="ejemplo de como se estructura una tabla">
+    <h3>Rowspan</h3>
     <p>Rowspan, indica el número de filas que ocupará la celda. Por defecto ocupa una sola fila.
-        De esta forma si ponemos  "td rowspan=3", la celda ocupará el alto de 3 celdas normales. <em>ejemplo:</em>
+        De esta forma si ponemos  " td rowspan="3" ", la celda ocupará el alto de 3 celdas normales. <em>ejemplo:</em>
     </p>
-    <img src="imagenes/rawspan.png">
+    <img src="imagenes/rowspan.png" title="rowspan">
+    <h3>Colspan</h3>
+    <p>Colspan, indica el número de columnas que ocupará la celda. Por defecto ocupa una sola columna.
+            De esta forma si ponemos  " td colspan="3" ", la celda ocupará el ancho de 3 celdas normales. <em>ejemplo:</em>
+    </p>
+    <img src="imagenes/colspan.png" alt="colspan">
+    <p>Ejemplo de como se aplican colspan y rowspan</p>
+    <img src="imagenes/colspan-rowspan.png" alt="colspan rowspan">
 </body>
 </html>
