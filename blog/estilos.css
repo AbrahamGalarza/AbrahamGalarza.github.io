@@ -49,7 +49,7 @@ h2{
 h3{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-a{
+article > a{
     background-color:#6E7070;
     color:white;
     padding : 10px;
@@ -72,10 +72,6 @@ a{
 }
 #img{
     display: block;
-    margin: auto;
-    text-align: center;
-}
-centrado{
-    margin: 0 auto;
-    display: block;
+    /*margin: auto;
+    text-align: center;*/
 }
