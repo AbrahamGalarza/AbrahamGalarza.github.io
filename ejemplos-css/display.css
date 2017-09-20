@@ -1,0 +1,23 @@
+a{
+    background-color:#5E4B56;
+    border-style: solid;
+    color: #B1B695;
+    padding: 20px;
+    text-decoration:none;
+    display: inline-block;
+}
+
+
+
+a:hover{
+    background-color: #AFD2E9;
+    color: black;
+}
+a:active{
+    color: blue;
+}
+
+
+
+
+
