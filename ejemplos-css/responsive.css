@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+}
+.contenedor{
+    background-color: #aaa;
+    width: 80%;
+    margin: 0 auto;
+}
+main{
+    background-color: pink;
+    width: 60%;
+    display: inline-block;
+    margin-right: -4px;
+}
+
+aside{
+    background-color: yellow;
+    width: 40%;
+    display: inline-block;
+    margin-right: -4px;
+    vertical-align: top;
+}
