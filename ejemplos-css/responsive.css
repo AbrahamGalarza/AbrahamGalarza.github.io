@@ -26,3 +26,16 @@ aside{
     margin-right: -4px;
     vertical-align: top;
 }
+
+
+@media screen and (max-width: 400px){
+    .contenedor {
+        width: 100%;
+    }
+    main {
+        width: 100%;
+    }
+    aside {
+        width: 100%;
+    }
+}

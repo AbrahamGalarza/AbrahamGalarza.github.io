@@ -6,3 +6,23 @@
     width: 100%;
     background-color: lightcyan;
 }
+
+@media print {
+    .contenedor {
+        color:blue;
+    }
+}
+
+@media screen and (min-width:500px){
+    .contenedor{
+        background-color: #aaa;
+    }
+
+}
+
+@media screen and (max-width:600px){
+    .contenedor{
+        background-color:yellow;
+    }
+
+}
