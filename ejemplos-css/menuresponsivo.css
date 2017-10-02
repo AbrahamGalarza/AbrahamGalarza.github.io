@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.logo{
+    display: inline-block;
+    max-width: 25%;
+    padding: 0.635rem;
+    vertical-align: middle;
+    
+}
+
+.logo img{
+    width: 100%;
+}
+
+nav{
+    display: inline-block;
+}
+.contenedor{
+    width: 80%;
+    background-color: #aaaa;
+    margin: 0 auto;
+}
+header{
+    background: #1B3357;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none; /*Eliminar el subrayado*/
+    padding: 1.1rem 1.25rem; /*Sale de 20px*/
+    margin: 0.635rem;
+    border-radius: 0.625rem;
+    display: block; /*Genera el espacio necesario al alrededor*/
+}
+
+nav ul li a:hover{
+    background-color:#E5EBEA;
+    color:#747572;
+}
+
+nav ul li{
+    display: inline-block;
+}
+nav ul{
+    list-style: none; /*Eliminar las viñetas*/
+}
+
+@media screen and (max-width: 48.75rem)
+{
+    .logo{
+        max-width: 100%;
+        margin:0 auto;
+    }
+}
