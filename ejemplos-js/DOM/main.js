@@ -1,0 +1,1 @@
+var cajas = document.getElementsByName('div');
