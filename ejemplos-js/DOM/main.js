@@ -1,69 +1,60 @@
-var btnAgregar = document.getElementById("btnAgregar");
+var btnAgregar = document.getElementById("btnAgregar");   //tenemos un boton de agregar le pasamos el id de button el html
 
-var padre = document.getElementById('contenedor');
-padre.addEventListener('click', function(evento)
-{
+
+var padre = document.getElementById("contenedor");
+
+/*delegacion de eventos sirve para eliminar los hijos*/
+padre.addEventListener('click', function(evento) {
     var hijo = evento.target;
-    
-    if(hijo!=padre)
+    console.log(hijo);
+    if(hijo != padre) //vañidar que no se hixo click al mismo contenedor padre osea asi mismo
     {
-        this.removeChild(hijo);
+        this.removeChild(hijo); //elimina hijos del nodo padre
     }
-}
-);
-/*
-var cajas = document.getElementsByClassName('caja');
-for(var i=0;i<cajas.length;i++)
-{
-    cajas[i].addEventListener('click',function()
+    
+    
+})
+/*var cajas = document.getElementsByClassName("caja");  //creo una variable de cajas
+var padre = document.getElementById("contenedor");
+for (var i=0; i<3; i++)
     {
-        padre.removeChild(this);
-    });
-}*/
-//cajas[0].addEventListener('click',function()
+        cajas[i].addEventListener('click', function() {
+            padre.removeChild(this);
+            })
+    }*/
 
 
-/*
-btnAgregar.onclick = agregaCaja;
-btnAgregar.onclick = prueba;
-btnAgregar.onclick = function()
-{
-    window.alert('Ejecutando funcion anonima');
-}*/
-/* envent listener*/
+
 btnAgregar.addEventListener('click', function(){
     var entrada = document.getElementById('entrada');
     var contenido = entrada.value;
-    if(contenido!="")
-    {
-        agregaCaja(contenido);
-    }
-    
+    agregaCaja(contenido);
+
+});
+
+
+
+/*document.addEventListener('click',agregaCaja);
+document.addEventListener('click',prueba);
+document.addEventListener('click',function (){window.alert('hola2');})*/
+
+function agregaCaja(texto){
+   // var cajas = document.getElementsByTagName('div');
+    var nuevo = document.createElement('div');
+    var texto = document.createTextNode(texto);
+    nuevo.appendChild(texto);
+    nuevo.setAttribute("class","caja");
+    var padre = document.getElementById('contenedor');
+    padre.appendChild(nuevo);
+
+  /*  nuevo.addEventListener('click', function() {
+        padre.removeChild(this);
+        })*/
+
+
 }
-);
-//document.addEventListener('click',agregaCaja);
-/*document.addEventListener('click',prueba);
-document.addEventListener('click', function() {
-    window.alert('funcion anonima');
-}
-);*/
-function agregaCaja(texto)
+
+/*function prueba()
 {
-    window.alert('agregando');
-var nuevo = document.createElement('div');
-var texto = document.createTextNode(texto);
-nuevo.appendChild(texto);
-nuevo.setAttribute("class","caja");
-var padre = document.getElementsById('contenedor');
-padre.appendChild(nuevo);
-
-}
-
-function prueba()
-{
-    window.alert('hola');
-}
-
-
-
-//agregaCaja();
+    window.alert("hola");
+}*/
