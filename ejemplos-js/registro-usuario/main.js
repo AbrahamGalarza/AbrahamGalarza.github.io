@@ -1,5 +1,13 @@
 
 var formulario = document.getElementById('registro');
+var mensaje = document.getElementById('mensaje');
+formulario.user.addEventListener('blur',function(){
+    verificaNombre();
+});
+
+formulario.password.addEventListener('keyup',function(){
+    mensaje.innerHTML = formulario.password.value.length;
+});
 formulario.addEventListener('submit',function(){
     if(!verificaNombre() || !verificaContraseña() || verificaTerminos())
     {
@@ -9,7 +17,17 @@ formulario.addEventListener('submit',function(){
 });
 
 function verificaNombre(){
-    if(formulario.user.value.charAt(0))
+    var expReg = /[a-z]/i;
+    if(expReg.test(formulario.user.value.charAt(0)))
+        {
+            return true;
+        }
+        else
+            {
+              mensaje.innerHTML = "Nombre de usuario no valido";
+                return false;
+            }
+        
     return false;
 }
 
