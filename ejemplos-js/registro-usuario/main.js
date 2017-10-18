@@ -41,14 +41,13 @@ formulario.password.addEventListener('keyup',function(){
 
 });
 formulario.addEventListener('submit',function(){
-    if(formulario.terminos.value == "si")
-        {
-            
+    var cond="si"
+    if(formulario.terminos.value == "si"){
         }
         else
-            {
-                alert("Acepta  los terminos y condiciones");
-            }
+        {
+            alert("Acepta  los terminos y condiciones");
+        }
 });
 
 function verificaNombre(){
