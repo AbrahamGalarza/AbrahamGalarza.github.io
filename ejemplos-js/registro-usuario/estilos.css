@@ -2,3 +2,20 @@ label{
     display: block;
     margin: 1rem;
 }
+.nivel-segura{
+    color : green;   
+}
+.nivel-media{
+    color: orange;
+}
+
+.nivel-debil{
+    color:red;
+}
+
+.coinciden{
+    color:green;
+}
+.distintas{
+    color :red;
+}

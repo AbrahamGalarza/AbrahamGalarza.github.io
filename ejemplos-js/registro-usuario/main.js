@@ -1,19 +1,54 @@
 
 var formulario = document.getElementById('registro');
 var mensaje = document.getElementById('mensaje');
+var retro = document.getElementById('retroalimentacion');
+var retro2 = document.getElementById('retroalimentacion2');
 formulario.user.addEventListener('blur',function(){
     verificaNombre();
 });
 
+formulario.password2.addEventListener('keyup',function(){
+    if(formulario.password.value == formulario.password2.value){//Si sin iguales
+        retro2.innerHTML = 'Son iguales';
+        retro2.className = 'coinciden';
+    }
+    else{
+        retro2.innerHTML = 'No coinciden';
+        retro2.className = 'distintas';
+    }
+});
+
 formulario.password.addEventListener('keyup',function(){
-    mensaje.innerHTML = formulario.password.value.length;
+    //mensaje.innerHTML = formulario.password.value.length;
+    var letras = (/[a-z]/i).test(formulario.password.value);
+    var digitos = (/[0-9]/).test(formulario.password.value);
+    var simbolos = (/[!"#$%&/()]/).test(formulario.password.value);
+    if(letras && digitos && simbolos)
+        {
+           retro.innerHTML = 'Segura';
+           retro.className = 'nivel-segura';
+        }
+        else if(letras && digitos)
+        {
+            retro.innerHTML = 'mediana';
+            retro.className = 'nivel-media';
+        }
+        else if(letras)
+        {
+            retro.innerHTML = 'debil';
+            retro.className = 'nivel-debil';
+        }
+
 });
 formulario.addEventListener('submit',function(){
-    if(!verificaNombre() || !verificaContraseña() || verificaTerminos())
-    {
-        alert("error");
-        event.preventDefault;
-    }
+    if(formulario.terminos.value == "si")
+        {
+            
+        }
+        else
+            {
+                alert("Acepta  los terminos y condiciones");
+            }
 });
 
 function verificaNombre(){
@@ -32,6 +67,13 @@ function verificaNombre(){
 }
 
 function verificaContraseña(){
+    var letras = (/[a-z]/i).test(formulario.password.value);
+    var digitos = (/[0-9]/).test(formulario.password.value);
+    var simbolos = (/[!"#$%&/()=]/).test(formulario.password.value);
+    if(letras && digitos && simbolos)
+        {
+
+        }
     return true;
 }
 
