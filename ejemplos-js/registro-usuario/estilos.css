@@ -19,3 +19,17 @@ label{
 .distintas{
     color :red;
 }
+
+.user-invalid{
+    color : red;
+}
+body{
+    background-color: lightgrey;
+}
+
+.user-valid{
+    color: green;
+}
+label{
+    font-family: Arial, Helvetica, sans-serif;
+}

@@ -9,28 +9,33 @@
 </head>
 <body>
     <h1>Registro de usuario</h1>
-    <form id ="registro">
-        <label >Nombre de Usuario: <input type="text" name="user" value="" id="user">
+    <fieldset>
+        <legend>Datos</legend>
+        <form id="registro">
+            <label>Nombre de Usuario: <input type="text" name="user" value="" id="user">
             <span id="mensaje"></span>
         </label>
-        <label>
+            <label>
             Contraseña: 
             <input type="password" name="password" value="" id="password">
             <span id="retroalimentacion"></span>
         </label>
-        <label>
+            <label>
             Contraseña nueva mente: 
             <input type="password" name="password2" value="" id="password2">
             <span id="retroalimentacion2"></span>
         </label>
-        <label>
-            <input type="checkbox" name="terminos" value="no" id="terminos">
+            <label>
+            <input type="checkbox" name="terminos" value="1" id="terminos">
             Acepto termino y condiciones
         </label>
-        <input type="submit" value="Registrar" id="btRegistrar">
+            <input type="submit" value="Registrar" id="btRegistrar">
+    </fieldset>
     </form>
     <div id="mensaje2">
     </div>
-    <script src="main.js"> </script>
+    <script src="main.js">
+
+    </script>
 </body>
 </html>

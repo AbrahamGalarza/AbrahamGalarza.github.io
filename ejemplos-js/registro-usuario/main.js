@@ -9,12 +9,14 @@ formulario.user.addEventListener('blur',function(){
 
 formulario.password2.addEventListener('keyup',function(){
     if(formulario.password.value == formulario.password2.value){//Si sin iguales
-        retro2.innerHTML = 'Son iguales';
-        retro2.className = 'coinciden';
+        retro2.innerHTML = 'Comprobación valida';
+        retro2.className = 'Las contraseñas no coinciden';
+        return true;
     }
     else{
-        retro2.innerHTML = 'No coinciden';
+        retro2.innerHTML = 'Comprobación no Valida';
         retro2.className = 'distintas';
+        return false;
     }
 });
 
@@ -30,50 +32,57 @@ formulario.password.addEventListener('keyup',function(){
         }
         else if(letras && digitos)
         {
-            retro.innerHTML = 'mediana';
+            retro.innerHTML = '*Mediana';
             retro.className = 'nivel-media';
         }
         else if(letras)
         {
-            retro.innerHTML = 'debil';
+            retro.innerHTML = '*Débil';
             retro.className = 'nivel-debil';
         }
 
 });
 formulario.addEventListener('submit',function(){
-    var cond="si"
-    if(formulario.terminos.value == "si"){
-        }
-        else
+    var formu = document.getElementById('registro');
+    if(formu.terminos.checked && verificaContraseña() && verificaNombre()){
+        alert("Usuario registrado");
+    }
+    else
+    {
+        if(formu.terminos.checked == false)
         {
-            alert("Acepta  los terminos y condiciones");
+            alert("Debes aceptar los terminos y condiciones para poder registrar");
         }
+        else{
+            alert("No se ha podido registar");
+        }
+    }
 });
 
 function verificaNombre(){
     var expReg = /[a-z]/i;
-    if(expReg.test(formulario.user.value.charAt(0)))
+    if(expReg.test(formulario.user.value.charAt(0)) && formulario.user.value.length >= 8)
         {
+            mensaje.innerHTML="Usuario Valido";
+            mensaje.className="user-valid";
             return true;
         }
         else
-            {
-              mensaje.innerHTML = "Nombre de usuario no valido";
-                return false;
-            }
-        
-    return false;
+        {
+            mensaje.innerHTML = "Nombre de usuario no valido deber comenzar con letra y tener almenos 8 caracteres";
+            mensaje.className = "user-invalid";
+            return false;
+        }
 }
 
 function verificaContraseña(){
-    var letras = (/[a-z]/i).test(formulario.password.value);
-    var digitos = (/[0-9]/).test(formulario.password.value);
-    var simbolos = (/[!"#$%&/()=]/).test(formulario.password.value);
-    if(letras && digitos && simbolos)
-        {
-
-        }
-    return true;
+    if(formulario.password.value == formulario.password2.value && formulario.password.value.length > 5)
+    {
+        return true;
+    }
+    else{
+        return false;
+    }
 }
 
 function verificaTerminos(){
