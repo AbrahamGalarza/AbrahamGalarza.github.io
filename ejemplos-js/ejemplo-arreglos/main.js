@@ -1,4 +1,5 @@
 var materias = [
+    {nombre: "EDA-A", creditos: 12, optativa:false},
     { nombre: "Tecnologias Web", creditos: 8, optativa: true },
     { nombre: "Pensamiento Computacional", creditos: 10, optativa: false },
     { nombre: "Compiladores", creditos: 10, optativa: false }
@@ -42,6 +43,54 @@ function muestraMaterias(){
 
     });
 
+    var tablacreada = document.getElementById('tabla');
+    tablacreada.addEventListener('click', function(e) {
+        var encabezado = e.target;
+        if(encabezado==document.getElementById('idnombre'))
+        {
+            materias.sort(function(a,b){
+                if(a.nombre > b.nombre)
+                return 1; //mayor
+                if(a.nombre < b.nombre)
+                return -1; //menor
+                else
+                return 0; //iguales
+            });
+            var tabla = document.getElementById('tabla');
+            tabla.remove(); //Elimina tabla 
+            muestraMaterias(); //agrega la nueva tabla con nueva organizacion
+        }
+        if(encabezado==document.getElementById('idcreditos'))
+        {
+            materias.sort( function(a,b) {
+                if(a.creditos > b.creditos)
+                return a.creditos - b.creditos; //mayor
+                if(a.creditos < b.creditos)
+                return a.creditos - b.creditos; //menor
+                else
+                return 0; //igual
+            });
+            var tabla = document.getElementById('tabla');
+            tabla.remove(); //Elimina tabla
+            muestraMaterias(); //agrega la nueva tabla con nueva organizacion
+        }
+        if(encabezado==document.getElementById('idoptativa'))
+        {
+            materias.sort( function(a,b) {
+                if(a.optativa > b.optativa)
+                return 1; //mayor
+                if(a.optativa < b.optativa)
+                return -1; // menor
+                else
+                return 0; //Igual
+            });
+            var tabla = document.getElementById('tabla');
+            tabla.remove();
+            muestraMaterias();
+        }
+    }
+    );
+
     /*console.log('for-normalito');
     for(var i =0; i < materias.length; i++){
         console.log('Nombre: ' + materias[i].nombre);
@@ -62,14 +111,17 @@ function crearEncabezado(){
         var nombre = document.createElement('th');
         var textoNombre = document.createTextNode('Nombre');
         nombre.appendChild(textoNombre);
-    
+        nombre.setAttribute('id','idnombre');
+
         var creditos = document.createElement('th');
         var textoCreditos = document.createTextNode('Creditos');
         creditos.appendChild(textoCreditos);
+        creditos.setAttribute('id','idcreditos');
     
         var optativa = document.createElement('th');
         var textoOptativa = document.createTextNode('Optativa');
         optativa.appendChild(textoOptativa);
+        optativa.setAttribute('id','idoptativa');
     
         encabezado.appendChild(nombre);
         encabezado.appendChild(creditos);
