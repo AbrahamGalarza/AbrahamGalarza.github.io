@@ -1,3 +1,11 @@
+var form = document.getElementById('for');
+
+form.addEventListener('button',function(){
+    var name = form.buscador.value;
+    alert(name);
+
+});
+
 var materias = [
     {nombre: "EDA-A", creditos: 12, optativa:false},
     { nombre: "Tecnologias Web", creditos: 8, optativa: true },
@@ -11,7 +19,7 @@ muestraMaterias();
 function muestraMaterias(){
     var tabla = document.createElement('table');//Crea elemento tabla
     tabla.setAttribute('id','tabla'); //Asigna un ID
-    tabla.appendChild(crearEncabezado());//Agrega nodo
+    tabla.appendChild(crearEncabezado());//Agrega nodo en donde crearEncabezado regresa el encabezado
     document.body.appendChild(tabla); //Agrega nodo
 
     //Recorrer Arreglo con forEach
@@ -32,7 +40,7 @@ function muestraMaterias(){
 
         //Columna Optativa
         var columna3 = document.createElement('td');
-        var optativa = document.createTextNode(mat.optativa);
+        var optativa = document.createTextNode(mat.optativa ? 'SI':'NO');
         columna3.appendChild(optativa);
 
         renglon.appendChild(columna1); //Agrega Columna 1 a renglon nombre
@@ -46,7 +54,7 @@ function muestraMaterias(){
     var tablacreada = document.getElementById('tabla');
     tablacreada.addEventListener('click', function(e) {
         var encabezado = e.target;
-        if(encabezado==document.getElementById('idnombre')) //Si es en nombre
+        if(encabezado == document.getElementById('idnombre')) //Si es en nombre
         {
             materias.sort(function(a,b){
                 if(a.nombre > b.nombre)
@@ -60,30 +68,17 @@ function muestraMaterias(){
             tabla.remove(); //Elimina tabla 
             muestraMaterias(); //agrega la nueva tabla con nueva organizacion
         }
-        if(encabezado==document.getElementById('idcreditos')) //Si es en creditos
+        if(encabezado == document.getElementById('idcreditos')) //Si es en creditos
         {
-            materias.sort( function(a,b) {
-                if(a.creditos > b.creditos)
-                return a.creditos - b.creditos; //mayor
-                if(a.creditos < b.creditos)
-                return a.creditos - b.creditos; //menor
-                else
-                return 0; //igual
-            });
+            materias.sort((a,b) => a.creditos - b.creditos);
+
             var tabla = document.getElementById('tabla');
             tabla.remove(); //Elimina tabla
             muestraMaterias(); //agrega la nueva tabla con nueva organizacion
         }
         if(encabezado == document.getElementById('idoptativa')) //Es en optativa
         {
-            materias.sort( function(a,b) {
-                if(a.optativa > b.optativa)
-                return 1; //mayor
-                if(a.optativa < b.optativa)
-                return -1; // menor
-                else
-                return 0; //Igual
-            });
+            materias.sort((a,b) => a.optativa - b.optativa).reverse();
             var tabla = document.getElementById('tabla');
             tabla.remove();
             muestraMaterias();
@@ -107,23 +102,24 @@ function muestraMaterias(){
 
 function crearEncabezado(){
 
-        var encabezado = document.createElement('tr');
-        var nombre = document.createElement('th');
-        var textoNombre = document.createTextNode('Nombre');
-        nombre.appendChild(textoNombre);
-        nombre.setAttribute('id','idnombre');
+        var encabezado = document.createElement('tr'); //renglon
 
-        var creditos = document.createElement('th');
-        var textoCreditos = document.createTextNode('Creditos');
-        creditos.appendChild(textoCreditos);
-        creditos.setAttribute('id','idcreditos');
+        var nombre = document.createElement('th'); //columna tipo th
+        var textoNombre = document.createTextNode('Nombre');
+        nombre.appendChild(textoNombre);    //Agrega columna para identificar campo nombre
+        nombre.setAttribute('id','idnombre');   //Agrega atributo para utilizar con el click
+
+        var creditos = document.createElement('th');    //renglon
+        var textoCreditos = document.createTextNode('Creditos');    //columna tipo th
+        creditos.appendChild(textoCreditos);    //Agrega columna para identificar campo creditos
+        creditos.setAttribute('id','idcreditos');   //Agrega atributo para utilizar con el click
     
-        var optativa = document.createElement('th');
-        var textoOptativa = document.createTextNode('Optativa');
-        optativa.appendChild(textoOptativa);
-        optativa.setAttribute('id','idoptativa');
+        var optativa = document.createElement('th');    //renglon
+        var textoOptativa = document.createTextNode('Optativa');    //columna tipo th
+        optativa.appendChild(textoOptativa);    //Agrega columna para identificar campo optativa
+        optativa.setAttribute('id','idoptativa');   //Agrega atributo para utilizar con el click
     
-        encabezado.appendChild(nombre);
+        encabezado.appendChild(nombre); //Agrega al encabezado los campos 
         encabezado.appendChild(creditos);
         encabezado.appendChild(optativa);
     
