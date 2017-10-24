@@ -46,7 +46,7 @@ function muestraMaterias(){
     var tablacreada = document.getElementById('tabla');
     tablacreada.addEventListener('click', function(e) {
         var encabezado = e.target;
-        if(encabezado==document.getElementById('idnombre'))
+        if(encabezado==document.getElementById('idnombre')) //Si es en nombre
         {
             materias.sort(function(a,b){
                 if(a.nombre > b.nombre)
@@ -60,7 +60,7 @@ function muestraMaterias(){
             tabla.remove(); //Elimina tabla 
             muestraMaterias(); //agrega la nueva tabla con nueva organizacion
         }
-        if(encabezado==document.getElementById('idcreditos'))
+        if(encabezado==document.getElementById('idcreditos')) //Si es en creditos
         {
             materias.sort( function(a,b) {
                 if(a.creditos > b.creditos)
@@ -74,7 +74,7 @@ function muestraMaterias(){
             tabla.remove(); //Elimina tabla
             muestraMaterias(); //agrega la nueva tabla con nueva organizacion
         }
-        if(encabezado==document.getElementById('idoptativa'))
+        if(encabezado == document.getElementById('idoptativa')) //Es en optativa
         {
             materias.sort( function(a,b) {
                 if(a.optativa > b.optativa)
