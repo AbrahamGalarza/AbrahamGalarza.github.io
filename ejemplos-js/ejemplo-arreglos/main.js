@@ -18,7 +18,8 @@ var materias = [
     {nombre: "EDA-A", creditos: 12, optativa:false},
     { nombre: "Tecnologias Web", creditos: 8, optativa: true },
     { nombre: "Pensamiento Computacional", creditos: 10, optativa: false },
-    { nombre: "Compiladores", creditos: 10, optativa: false }
+    { nombre: "Compiladores", creditos: 10, optativa: false },
+    { nombre: "Software A", creditos: 10, optativa: false }
 ];
 
 muestraMaterias();
@@ -31,16 +32,11 @@ function aaa(nombre)
 
 function muestraMateriasSearch(nombre)
 {
-    alert(existetabla2);
+    //alert(existetabla2);
     
     var tabla2 = document.createElement('table');//Crea elemento tabla
     tabla2.setAttribute('id','tabla2'); //Asigna un ID
-    tabla2.appendChild(crearEncabezado());//Agrega nodo en donde crearEncabezado regresa el encabezado
-    tabla2.remove();
-    document.body.appendChild(tabla2); //Agrega nodo
-    
-    
-    
+    tabla2.appendChild(crearEncabezado());//Agrega nodo en donde crearEncabezado regresa el encabezado  
 
     materias.forEach(function (mat){
         var nom = mat.nombre;
@@ -57,7 +53,7 @@ function muestraMateriasSearch(nombre)
             col2.appendChild(text2);
 
             var col3 = document.createElement('td');
-            var text3 = document.createTextNode(mat.optativa);
+            var text3 = document.createTextNode(mat.optativa? 'SI':'NO');
             col3.appendChild(text3);
 
             renglon2.appendChild(col1);
@@ -68,8 +64,9 @@ function muestraMateriasSearch(nombre)
         }
 
     });
-
-    
+    var tablaant = document.getElementById('tabla2');
+    document.body.appendChild(tabla2);
+    tablaant.remove();
 }
 
 
