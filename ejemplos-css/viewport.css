@@ -4,7 +4,7 @@
 }
 .contenedor{
     width: 100%;
-    background-color: lightcyan;
+    background-color: blue;
 }
 
 @media print {
@@ -13,14 +13,30 @@
     }
 }
 
-@media screen and (min-width:500px){
+
+
+@media screen and (min-width:600px){
     .contenedor{
         background-color: #aaa;
     }
 
 }
 
-@media screen and (max-width:600px){
+@media screen and (min-width: 700px)
+{
+    .contenedor{
+        background-color: lightblue;
+    }
+}
+
+@media screen and (min-width: 800px)
+{
+    .contenedor{
+        background-color: aqua;
+    }
+}
+
+@media screen and (max-width:500px){
     .contenedor{
         background-color:yellow;
     }

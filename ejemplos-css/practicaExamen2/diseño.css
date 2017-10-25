@@ -1,0 +1,21 @@
+.cuerpo{
+    width: 80%;
+    margin: 0  auto;
+}
+
+h1{
+    text-align: center;
+    color:  red;
+}
+
+p{
+    text-align: justify;
+}
+
+@media screen and (max-width: 500px)
+{
+    .cuerpo{
+        background-color:  blue;
+        display: block;
+    }
+}

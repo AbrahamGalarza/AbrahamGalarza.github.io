@@ -23,6 +23,7 @@ td{
 }
 
 table{
+    padding: 1rem;
     margin:  0 auto;
     width: 50%;
     /*border: 1px solid black*/

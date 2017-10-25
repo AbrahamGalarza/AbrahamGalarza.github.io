@@ -1,10 +1,18 @@
 var form = document.getElementById('for');
+var boton = document.getElementById('btnBuscar');
+var existetabla2 = false;
 
-form.addEventListener('button',function(){
-    var name = form.buscador.value;
-    alert(name);
-
-});
+boton.onclick = function(e){
+    var palabra = form.buscador.value;
+    if(palabra.length == 0)
+    {
+        alert('Introduce un nombre para buscar');
+    }
+    else{
+        muestraMateriasSearch(palabra);
+    }
+    //alert(palabra);
+}
 
 var materias = [
     {nombre: "EDA-A", creditos: 12, optativa:false},
@@ -14,6 +22,55 @@ var materias = [
 ];
 
 muestraMaterias();
+
+function aaa(nombre)
+{
+    alert(nombre);
+}
+
+
+function muestraMateriasSearch(nombre)
+{
+    alert(existetabla2);
+    
+    var tabla2 = document.createElement('table');//Crea elemento tabla
+    tabla2.setAttribute('id','tabla2'); //Asigna un ID
+    tabla2.appendChild(crearEncabezado());//Agrega nodo en donde crearEncabezado regresa el encabezado
+    tabla2.remove();
+    document.body.appendChild(tabla2); //Agrega nodo
+    
+    
+    
+
+    materias.forEach(function (mat){
+        var nom = mat.nombre;
+        var nombr = nombre.toUpperCase();
+        nom = nom.toUpperCase();
+        if (nom.search(nombr) != -1){
+            var renglon2 = document.createElement('tr');
+            var col1 = document.createElement('td');
+            var text1 = document.createTextNode(mat.nombre);
+            col1.appendChild(text1);
+
+            var col2 = document.createElement('td');
+            var text2 = document.createTextNode(mat.creditos);
+            col2.appendChild(text2);
+
+            var col3 = document.createElement('td');
+            var text3 = document.createTextNode(mat.optativa);
+            col3.appendChild(text3);
+
+            renglon2.appendChild(col1);
+            renglon2.appendChild(col2);
+            renglon2.appendChild(col3);
+
+            tabla2.appendChild(renglon2);
+        }
+
+    });
+
+    
+}
 
 
 function muestraMaterias(){
@@ -25,7 +82,7 @@ function muestraMaterias(){
     //Recorrer Arreglo con forEach
 
     materias.forEach(function (mat){
-
+        var nom = mat.nombre;
         var renglon = document.createElement('tr');
 
         ///Columna Nombre
@@ -48,7 +105,6 @@ function muestraMaterias(){
         renglon.appendChild(columna3); //Agrega Columna 3 a renglon
 
         tabla.appendChild(renglon);
-
     });
 
     var tablacreada = document.getElementById('tabla');
