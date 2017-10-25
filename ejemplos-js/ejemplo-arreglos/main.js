@@ -2,11 +2,18 @@ var form = document.getElementById('for');
 var boton = document.getElementById('btnBuscar');
 var existetabla2 = false;
 
+var ordenNombre = false;
+var ordenCreditos = false;
+var ordenOptativa = false;
+
+
+
+
 boton.onclick = function(e){
     var palabra = form.buscador.value;
     if(palabra.length == 0)
     {
-        alert('Introduce un nombre para buscar');
+        //alert('Introduce un nombre para buscar');
     }
     else{
         muestraMateriasSearch(palabra);
@@ -14,13 +21,22 @@ boton.onclick = function(e){
     //alert(palabra);
 }
 
+var filtro = materias;
+
+
+function filtrarMaterias(){
+
+}
+
 var materias = [
     {nombre: "EDA-A", creditos: 12, optativa:false},
     { nombre: "Tecnologias Web", creditos: 8, optativa: true },
     { nombre: "Pensamiento Computacional", creditos: 10, optativa: false },
     { nombre: "Compiladores", creditos: 10, optativa: false },
-    { nombre: "Software A", creditos: 10, optativa: false }
+    { nombre: "Software A", creditos: 10, optativa: false },
+    { nombre: "Introduccion a la programacion", creditos : 10,optativa : false}
 ];
+
 
 muestraMaterias();
 
@@ -109,6 +125,7 @@ function muestraMaterias(){
         var encabezado = e.target;
         if(encabezado == document.getElementById('idnombre')) //Si es en nombre
         {
+            if(ordenNombre == true){
             materias.sort(function(a,b){
                 if(a.nombre > b.nombre)
                 return 1; //mayor
@@ -117,13 +134,34 @@ function muestraMaterias(){
                 else
                 return 0; //iguales
             });
+            ordenNombre = false;
+        }
+        else {
+            materias.sort(function(a,b){
+                if(a.nombre > b.nombre)
+                return 1; //mayor
+                if(a.nombre < b.nombre)
+                return -1; //menor
+                else
+                return 0; //iguales
+            }).reverse();
+            ordenNombre = true;
+        }
             var tabla = document.getElementById('tabla');
             tabla.remove(); //Elimina tabla 
             muestraMaterias(); //agrega la nueva tabla con nueva organizacion
         }
         if(encabezado == document.getElementById('idcreditos')) //Si es en creditos
         {
-            materias.sort((a,b) => a.creditos - b.creditos);
+            if(ordenCreditos == true){
+                materias.sort((a,b) => a.creditos - b.creditos).reverse();
+                ordenCreditos = false;
+            }
+            else {
+                materias.sort((a,b) => a.creditos - b.creditos);
+                ordenCreditos = true;
+            }
+            
 
             var tabla = document.getElementById('tabla');
             tabla.remove(); //Elimina tabla
@@ -131,7 +169,16 @@ function muestraMaterias(){
         }
         if(encabezado == document.getElementById('idoptativa')) //Es en optativa
         {
-            materias.sort((a,b) => a.optativa - b.optativa).reverse();
+            if(ordenOptativa == true)
+            {
+                materias.sort((a,b) => a.optativa - b.optativa).reverse();
+                ordenOptativa = false;
+            }
+            else{
+                materias.sort((a,b) => a.optativa - b.optativa);
+                ordenOptativa = true;
+            }
+            
             var tabla = document.getElementById('tabla');
             tabla.remove();
             muestraMaterias();
