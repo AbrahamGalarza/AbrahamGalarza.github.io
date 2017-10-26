@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.cuerpo{
+    width: 80%;
+    margin: 0 auto;
+}
+
+p{
+    text-align: justify;
+    width: 100%;
+}
+
+@media screen and (max-width : 400px) and (min-width : 0px) {
+    .cuerpo{
+        background-color: purple;
+    }
+}
+
+@media screen and (min-width : 401px) and (max-width : 800px) {
+    p{
+        color:blue;
+        font-size: 1.05rem;
+    }
+    
+}
