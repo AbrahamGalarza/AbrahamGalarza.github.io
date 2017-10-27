@@ -119,11 +119,11 @@ botonAdd.onclick = function(e)
     var prio = document.getElementById('prioridad');
     var valuePrio = form.tipo.value;
     var pri=0;
-    if(valuePrio == 'alta')
+    if(valuePrio == 'Alta')
         pri=3;
-    else if(valuePrio == 'media')
+    else if(valuePrio == 'Media')
         pri=2;
-    else if(valuePrio == 'baja')
+    else if(valuePrio == 'Baja')
         pri=1;
     //alert(tar);
     //alert(descr);
