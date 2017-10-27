@@ -167,7 +167,7 @@ function muestraTablaFiltrada(tareas1)
         else if(mat.prioridad == 2)
             prioridadname="Media";
         else if(mat.prioridad == 3)
-            prioridadname ="aAlta";
+            prioridadname ="Alta";
         var textoprioridadd = document.createTextNode(prioridadname);
         prioridadd.appendChild(textoprioridadd);
 
