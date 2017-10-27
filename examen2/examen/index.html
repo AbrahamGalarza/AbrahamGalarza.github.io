@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Examen 2</title>
+</head>
+
+<body>
+    <h1>ADMINISTRADOR DE TAREAS</h1>
+    <div>
+        <form id="form">
+            <label>Nombre <input type="text" name="tarea" value="" id="tarea" onkeypress="return IsLetter(event)"></label>
+            <label> Descripción <input type="text" name="descripcion" value="" id="descripcion" onkeypress="return IsLetter(event)"></label>
+            <label><input type="radio" name="tipo" value="baja" id="tipo" checked >Baja</label>
+            <label><input type="radio" name="tipo" value="media" id="tipo">Media</label>
+            <label><input type="radio" name="tipo" value="alta" id="tipo">Alta</label>
+            <input type="button" name="agregar" value="Agregar" , id="agregar"><br>
+            <label>Eliminar completadas <input type="button" name="eliminar" value="Aceptar" , id="eliminar"></label><br>
+            <label>Filtrar <input type="text" name="busqueda" value="" id="busqueda"></label>            
+        </form>
+    </div>
+        <script src="main.js"></script>
+</body>
+
+</html>
