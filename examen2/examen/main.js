@@ -163,11 +163,11 @@ function muestraTablaFiltrada(tareas1)
         var prioridadd = document.createElement('td');
         var prioridadname ="";
         if(mat.prioridad == 1)
-            prioridadname="baja";
+            prioridadname="Baja";
         else if(mat.prioridad == 2)
-            prioridadname="media";
+            prioridadname="Media";
         else if(mat.prioridad == 3)
-            prioridadname ="alta";
+            prioridadname ="aAlta";
         var textoprioridadd = document.createTextNode(prioridadname);
         prioridadd.appendChild(textoprioridadd);
 
